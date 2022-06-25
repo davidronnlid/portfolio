@@ -1,28 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
+import * as React from 'react';
 import './App.css';
-import Button from '@mui/material/Button';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 import ResponsiveAppBar from "./components/header"
+import  PageSection from './components/pageSection';
+import  Portfolio from './pageSections/portfolio';
+import  WhoIAm from './pageSections/whoIAm';
+import  Contact from './pageSections/contact';
 
+const theme = createTheme({
+  palette: {
+    primary: {      
+      main: "#173d52"
+      },
+    secondary: {      
+      main: "#c3d0a3"
+      } 
+  },
+});
 
 function App() {
   return (
     <div className="App">
+    <ThemeProvider theme={theme}>
       <ResponsiveAppBar />
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <PageSection title='Portfolio' comp={<><Portfolio title="This is the Portfolio title" /></>}/>
+      <PageSection title='PageSection 2 (will become Who I am section)' comp={<><WhoIAm title="Who I Am" /></>}/>
+      <PageSection title='PageSection 3 (will become Contact section)' comp={<><Contact title="Contact" /></>}/>
+    </ThemeProvider>
     </div>
   );
 }

@@ -14,7 +14,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import MUIImg from "./image";
 
-const pages = ['Portfolio', 'Who I am', 'Contact'];
+const pageSections = ['Portfolio', 'Who I am', 'Contact'];
 const settings = [{name: "Github", contactLink: "https://github.com/davidronnlid"}, {name: "LinkedIn", contactLink: "https://linkedin.com/in/davidronnlid"}];
 
 const ResponsiveAppBar = () => {
@@ -85,7 +85,7 @@ const ResponsiveAppBar = () => {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
+              {pageSections.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu} href={"#" + page}>
                   <Typography textAlign="center" id={page}>{page}</Typography>
                 </MenuItem>
@@ -112,7 +112,7 @@ const ResponsiveAppBar = () => {
             DAVID RÖNNLID
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
+            {pageSections.map((page) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
@@ -147,8 +147,8 @@ const ResponsiveAppBar = () => {
               onClose={handleCloseUserMenu}
             >
               {settings.map((setting) => (
-                <MenuItem key={setting.name} href={setting.contactLink} onClick={handleCloseUserMenu}>
-                  <Link textAlign="center" href={setting.contactLink} underline="hover">{setting.name}</Link>
+                <MenuItem key={setting.name} onClick={handleCloseUserMenu}>
+                  <Link textAlign="center" underline="none" href={setting.contactLink}>{setting.name}</Link>
                 </MenuItem>
               ))}
             </Menu>
