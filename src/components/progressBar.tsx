@@ -2,9 +2,11 @@ import { styled } from "@mui/material/styles";
 import LinearProgress, {
   linearProgressClasses
 } from "@mui/material/LinearProgress";
+import { Typography } from "@mui/material";
 
 const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
   height: 10,
+  width: "20vw",
   borderRadius: 5,
   [`&.${linearProgressClasses.colorPrimary}`]: {
     backgroundColor:
@@ -16,8 +18,14 @@ const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
   }
 }));
 
-export default function CustomizedProgressBar() {
-  return (
-      <BorderLinearProgress variant="determinate" value={50} />
-  );
+interface progressAmount {
+    title: string;
+    percentage: number;
+}
+
+export default function ProgressBar({title, percentage}: progressAmount) {
+  return (<><Typography textAlign="left"
+  variant='h6'>{title}</Typography>
+      <BorderLinearProgress variant="determinate" value={percentage} />
+  </>);
 }
