@@ -13,6 +13,7 @@ import Link from '@mui/material/Link';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import MUIImg from "./image";
+import DRsocial from "../images/DRSocial.png"
 
 const pageSections = ['Portfolio', 'Who I am', 'Contact'];
 const settings = [{name: "Github", contactLink: "https://github.com/davidronnlid"}, {name: "LinkedIn", contactLink: "https://linkedin.com/in/davidronnlid"}];
@@ -92,7 +93,7 @@ const ResponsiveAppBar = () => {
               ))}
             </Menu>
           </Box>
-          <MUIImg imgSrcUrl="https://davidronnlidmovies.netlify.app/static/media/ConfidentSmile.d573110a.png" imgAlt='David Rönnlid smiling confidently'/>
+          <MUIImg imgSrcUrl="https://media-exp1.licdn.com/dms/image/C4D03AQEoRfy6V8Yr7g/profile-displayphoto-shrink_800_800/0/1580821720283?e=1661385600&v=beta&t=zkUHjDofSzSNHCt6HMzRDUgQL805cfuP4AxyqM0PQSc" imgAlt='David Rönnlid smiling confidently'/>
           <Typography
             variant="h5"
             noWrap
@@ -127,7 +128,7 @@ const ResponsiveAppBar = () => {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Click to open menu">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="David Rönnlid" src="https://media-exp1.licdn.com/dms/image/C4D03AQEoRfy6V8Yr7g/profile-displayphoto-shrink_800_800/0/1580821720283?e=1661385600&v=beta&t=zkUHjDofSzSNHCt6HMzRDUgQL805cfuP4AxyqM0PQSc" />
+                <Avatar alt="David Rönnlid" src={DRsocial} />
               </IconButton>
             </Tooltip>
             <Menu
