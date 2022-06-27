@@ -2,6 +2,7 @@ import { Typography } from '@mui/material';
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 import SimpleCollapse from '../components/simpleCollapse';
+import CustomizedProgressBars from "../components/progressBar"
       
   type WhoIamProps = {
         title?: string;
@@ -16,7 +17,13 @@ import SimpleCollapse from '../components/simpleCollapse';
           <Box sx={{width: "80%", mx: "auto"}}>
 
 <Typography variant="h6">Tech competencies</Typography>
-<Typography variant='body1'>Heyou bro</Typography>
+<Typography textAlign="left"
+variant='h6'>React</Typography>
+<CustomizedProgressBars />
+
+<Typography textAlign="left"
+variant='h6'>TypeScript</Typography>
+<CustomizedProgressBars />
             
             {title ? <Typography variant="h5">{title}</Typography> : ""}
             <Typography variant="h6">Vision and how I spend my time</Typography>
