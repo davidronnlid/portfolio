@@ -23,9 +23,9 @@ function App() {
     <div className="App">
     <ThemeProvider theme={theme}>
       <ResponsiveAppBar />
-      <PageSection title='Portfolio' comp={<><Portfolio title="This is the Portfolio title" /></>}/>
-      <PageSection title='PageSection 2 (will become Who I am section)' comp={<><WhoIAm title="Who I Am" /></>}/>
-      <PageSection title='PageSection 3 (will become Contact section)' comp={<><Contact title="Contact" /></>}/>
+      <PageSection title="Portfolio" comp={<><Portfolio  id="Portfolio" /></>}/>
+      <PageSection title="Who I Am" comp={<><WhoIAm  id="Who%20I%20am" /></>}/>
+      <PageSection title="Contact" comp={<><Contact  id="Contact"/></>}/>
     </ThemeProvider>
     </div>
   );
