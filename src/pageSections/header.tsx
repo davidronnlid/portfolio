@@ -12,8 +12,8 @@ import Button from '@mui/material/Button';
 import Link from '@mui/material/Link';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import MUIImg from "./image";
-import DRsocial from "../images/DRSocial.png"
+import MUIImg from "../components/image";
+import DRsocial from "../images/DRSocial.png";
 
 const pageSections = ['Portfolio', 'Who I am', 'Contact'];
 const settings = [{name: "Github", contactLink: "https://github.com/davidronnlid"}, {name: "LinkedIn", contactLink: "https://linkedin.com/in/davidronnlid"}];

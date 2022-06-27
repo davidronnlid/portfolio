@@ -1,7 +1,7 @@
 import * as React from 'react';
 import './App.css';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import ResponsiveAppBar from "./components/header"
+import ResponsiveAppBar from "./pageSections/header"
 import  PageSection from './components/pageSection';
 import  Portfolio from './pageSections/portfolio';
 import  WhoIAm from './pageSections/whoIAm';

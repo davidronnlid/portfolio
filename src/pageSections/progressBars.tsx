@@ -15,6 +15,8 @@ interface ProgressBarsProps {
 interface progBarProps {
   title: string;
   percentage: number;
+  icon: any;
+  link: string;
 }
 
 const ProgressBars = ({
@@ -22,40 +24,30 @@ const ProgressBars = ({
   progBarsData,
 }: ProgressBarsProps): JSX.Element => (
   <Box
-    sx={{ display: { xs: "flex", md: "flex" }, my: 1 }}
-    children={
+    sx={{  my: 1 }}
+    >
       <>
         {metaTitle ? (
-          <Typography textAlign="left" variant="h5">
+          <Typography textAlign="left" variant="h6">
             {metaTitle}
           </Typography>
         ) : (
           ""
         )}
-
-        {progBarsData.map(
+<Box sx={{display: { xs: "flex", md: "flex" }, flexDirection: "column"}}>{progBarsData.map(
           (progBarData: progBarProps) =>
             (
               <ProgressBar
                 title={progBarData.title}
                 percentage={progBarData.percentage}
+                icon={progBarData.icon}
+                link={progBarData.link}
               />
             ) as JSX.Element
         )}
-
-        {/* 
-<ProgressBar title="React" percentage={80} />
-<ProgressBar title="HTML5" percentage={80}/>
-<ProgressBar title="JavaScript (ES6)" percentage={80}/>
-<ProgressBar title="Netlify" percentage={30}/>
-<ProgressBar title="Git" percentage={70}/>
-<ProgressBar title="CSS3" percentage={70}/>
-<ProgressBar title="Redux" percentage={55}/>
-<ProgressBar title="TypeScript" percentage={40}/>
-<ProgressBar title="NodeJS" percentage={30}/> */}
-      </>
-    }
-  />
+        </Box>
+</>
+</Box> 
 );
 
 export default ProgressBars;
