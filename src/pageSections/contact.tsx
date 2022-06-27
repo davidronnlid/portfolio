@@ -11,12 +11,11 @@ import TooltipLink from "../components/tooltip"
         id: string;
       };
 
-  const Contact = ({title, id}: ContactProps):JSX.Element => <Box
+const Contact = ({title, id}: ContactProps):JSX.Element => <Box
         sx={{ display: { xs: 'flex', md: 'flex' }, my: 1,
                   }}
         children={
         <Box sx={{width: "80%", mx: "auto"}} id={id}>
-
 
 {title ? <Typography variant="h5">{title}</Typography> : ""}
 
