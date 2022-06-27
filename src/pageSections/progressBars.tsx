@@ -2,12 +2,6 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import ProgressBar from "../components/progressBar";
 
-// Should have flexbox item props so that tech stack will take up 50% of horizontal page. Letting something else (contact?) take the space in the other half of the page
-
-{
-  /* <Box sx={{ justifyContent: 'space-between' }}>… */
-}
-
 interface ProgressBarsProps {
   metaTitle?: string;
   progBarsData: any;

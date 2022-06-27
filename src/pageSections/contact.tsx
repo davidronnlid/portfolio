@@ -1,8 +1,5 @@
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-// import Tooltip from '@mui/material/Tooltip';
-// import IconButton from '@mui/material/IconButton';
-// import Link from '@mui/material/Link';
 import {FaLinkedinIn, FaGithub} from "react-icons/fa"
 import TooltipLink from "../components/tooltip"
 
