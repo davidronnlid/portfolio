@@ -20,16 +20,13 @@ import TooltipLink from "../components/tooltip"
 
 {title ? <Typography variant="h5">{title}</Typography> : ""}
 
-
-<Typography variant="h6" sx={{mb:1}}>You can also find me on LinkedIn and GitHub</Typography>
-
-{/* 
-<Tooltip title="Davids LinkedIn page"><IconButton><Link href="https://linkedin.com/in/davidronnlid/"><FaLinkedinIn style={{width:"50px", height: "50px", marginRight: "15px"}} /></Link></IconButton></Tooltip><FaGithub style={{width:"50px", height: "50px", marginLeft: "15px"}} /> */}
+<Typography variant="subtitle1">Contact form coming soon...</Typography>
+<br/>
+<Typography variant="h6" sx={{mb:1}}>Connect via LinkedIn or view my code on GitHub</Typography>
 
 <TooltipLink title="Davids LinkedIn page" link="https://linkedin.com/in/davidronnlid/" icon={<FaLinkedinIn style={{height: "50px", width: "50px", marginRight: "20%"}}/>}/>
 <TooltipLink title="Davids GitHub page" link="https://github.com/davidronnlid/" icon={<FaGithub style={{height: "50px", width: "50px", marginLeft: "20%"}}/>}/>
 
 </Box>
-
         }/>
   export default Contact;

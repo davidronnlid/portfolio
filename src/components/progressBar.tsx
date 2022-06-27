@@ -3,9 +3,7 @@ import LinearProgress, {
   linearProgressClasses
 } from "@mui/material/LinearProgress";
 import Typography from "@mui/material/Typography";
-import Tooltip from "@mui/material/Tooltip";
-import Link from "@mui/material/Link";
-import IconButton from "@mui/material/IconButton";
+import TooltipLink from "./tooltip";
 
 const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
   height: 10,
@@ -22,17 +20,16 @@ const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
 }));
 
 interface progressAmount {
-    title?: string;
+    title: string;
     percentage: number;
-    icon?: JSX.Element;
-    link?: string; 
+    icon: JSX.Element;
+    link: string; 
 }
 
 export default function ProgressBar({title, percentage, icon, link}: progressAmount) {
   return (<><Typography textAlign="left"
-  variant='h6' children={<>{icon ? <Tooltip title={title ? title : "Nope"}><IconButton><Link href={link}>{icon}</Link></IconButton></Tooltip> : title ? title : "No icon or title available"} 
+  variant='h6' children={<><TooltipLink icon={icon} title={title} link={link}/>
 
   <BorderLinearProgress variant="determinate" value={percentage} sx={{mb:3}}/>
   </>} /></>);
 }
-
