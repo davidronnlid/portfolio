@@ -6,9 +6,10 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 
 interface contentToShow {
   toShow: ReactNode | string;
+  label: string;
 }
 
-export default function SimpleCollapse({ toShow }: contentToShow) {
+export default function SimpleCollapse({ toShow, label }: contentToShow) {
   const [checked, setChecked] = useState(false);
 
   const handleChange = () => {
@@ -19,7 +20,7 @@ export default function SimpleCollapse({ toShow }: contentToShow) {
     <Box>
       <FormControlLabel
         control={<Switch checked={checked} onChange={handleChange} />}
-        label="Show more about David"
+        label={label}
       />
       <Collapse in={checked}>{toShow}</Collapse>
     </Box>
