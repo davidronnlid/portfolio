@@ -2,10 +2,9 @@ import * as React from 'react';
 import './App.css';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import ResponsiveAppBar from "./pageSections/header"
-import  PageSection from './components/pageSection';
-import  Portfolio from './pageSections/portfolio';
-import  WhoIAm from './pageSections/whoIAm';
-import  Contact from './pageSections/contact';
+import { Routes, Route } from "react-router-dom";
+import HomePage from "./pages/home"
+import SuccessPage from "./pages/success"
 
 const theme = createTheme({
   palette: {
@@ -19,15 +18,15 @@ const theme = createTheme({
 });
 
 function App() {
-  return (
+  return (<ThemeProvider theme={theme}>
     <div className="App">
-    <ThemeProvider theme={theme}>
       <ResponsiveAppBar />
-      <PageSection title="Portfolio" comp={<><Portfolio  id="Portfolio" /></>}/>
-      <PageSection title="Who I Am" comp={<><WhoIAm  id="Who%20I%20am" /></>}/>
-      <PageSection title="Contact" comp={<><Contact  id="Contact"/></>}/>
-    </ThemeProvider>
+    <Routes>
+      <Route path="/" element={<HomePage />}/>
+      <Route path="/success" element={<SuccessPage title="Success!"/>}/>
+      </Routes>
     </div>
+    </ThemeProvider>
   );
 }
 
