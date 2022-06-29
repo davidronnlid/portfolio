@@ -3,7 +3,7 @@ import './App.css';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import ResponsiveAppBar from "./pageSections/header"
 import HomePage from "./pages/home"
-import {Routes, Route, Link, Outlet} from "react-router-dom"
+import {Routes, Route, Outlet} from "react-router-dom"
 import SuccessPage from './pages/success';
 
 const theme = createTheme({
@@ -27,7 +27,8 @@ function SetConstantHeader() {
 }
 
 function App() {
-  return (<ThemeProvider theme={theme}>
+  return (
+  <ThemeProvider theme={theme}>
     <div className="App">
       <Routes>
         <Route path="/" element={<SetConstantHeader />}>
