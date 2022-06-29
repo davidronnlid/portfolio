@@ -2,9 +2,9 @@ import * as React from 'react';
 import './App.css';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import ResponsiveAppBar from "./pageSections/header"
-import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/home"
-import SuccessPage from "./pages/success"
+import {Routes, Route, Link, Outlet} from "react-router-dom"
+import SuccessPage from './pages/success';
 
 const theme = createTheme({
   palette: {
@@ -17,13 +17,23 @@ const theme = createTheme({
   },
 });
 
+
+function SetConstantHeader() {
+  return (
+  <><ResponsiveAppBar />
+  <Outlet />
+  </>)
+
+}
+
 function App() {
   return (<ThemeProvider theme={theme}>
     <div className="App">
-      <ResponsiveAppBar />
-    <Routes>
-      <Route path="/" element={<HomePage />}/>
-      <Route path="/success" element={<SuccessPage title="Success!"/>}/>
+      <Routes>
+        <Route path="/" element={<SetConstantHeader />}>
+          <Route path="/" element={<HomePage />} />
+          <Route path="success" element={<SuccessPage title="Success!" />} />
+        </Route>
       </Routes>
     </div>
     </ThemeProvider>
