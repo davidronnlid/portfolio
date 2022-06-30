@@ -33,7 +33,7 @@ function App() {
       <Routes>
         <Route path="/" element={<SetConstantHeader />}>
           <Route path="/" element={<HomePage />} />
-          <Route path="success" element={<SuccessPage title="Success!" />} />
+          <Route path="contact-success" element={<SuccessPage title="Success!" description="Your email was successfully sent to David."/>} />
         </Route>
       </Routes>
     </div>
