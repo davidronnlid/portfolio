@@ -1,7 +1,7 @@
 import * as React from 'react';
 import './App.css';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import ResponsiveAppBar from "./homePageSections/header"
+import ResponsiveAppBar from "./components/header"
 import HomePage from "./pages/home"
 import {Routes, Route, Outlet} from "react-router-dom"
 import SuccessPage from './pages/success';

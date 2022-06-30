@@ -2,7 +2,7 @@ import { Typography } from '@mui/material';
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 import SimpleCollapse from '../components/simpleCollapse';
-import ProgressBars from "./progressBars";
+import ProgressBars from "../components/progressBars";
 import Divider from '@mui/material/Divider';
 import { SiTypescript, SiRedux, SiNodedotjs, SiReact, SiHtml5, SiCss3, SiJavascript, SiGoogle, SiGit } from 'react-icons/si';
 import Grid from '@mui/material/Grid';
@@ -19,7 +19,7 @@ import Grid from '@mui/material/Grid';
       }}
     children={<Grid container sx={{width: "80%", mx: "auto", flexDirection:  "row"}}>
         <Grid item xs={12} md={3}><ProgressBars progBarsData={progBarsData} metaTitle="Tech competencies" /></Grid>
-        <Grid item xs={0} md={3}><Divider flexItem={true} orientation="vertical" sx={{height: "100%", width:"1px", mx: "auto"}} /></Grid>
+        <Grid item xs={0} md={3}><Divider flexItem={true} orientation="vertical"  sx={{height: "100%", width:"1px", mx: "auto"}} /></Grid>
         <Grid item xs={12} md={6}>
   {title ? <Typography variant="h5">{title}</Typography> : ""}
         <Typography variant="h6">Vision and how I spend my time</Typography>
