@@ -33,10 +33,10 @@ const Item = styled(Paper)(({ theme }) => ({
             <Box sx={{ flexGrow: 1 }}>
         <Grid container spacing={2}
  >
-          <Grid item xs={6} >
+          <Grid item xs={12} md={6} >
             <Item><ProjectCard visitProjectLink='https://davidronnlidcalculator.netlify.app' title='Calculator' description='Do basic arithmetic operations' projectImgSrcUrl={CalcAppImage} moreDetailsSubtitle="Read more about the calculator below" moreDetailsDescription='I created this calculator app for two reasons. These are 1. for practice, and 2. to show competence with React as well as JavaScript for potential employers.' projectGithubLink="https://github.com/davidronnlid/calculator-app"/></Item>      
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={12} md={6}>
             <Item>
                 <ProjectCard visitProjectLink='https://davidronnlidmovies.netlify.app' title='David Rönnlid movies' description='Read about the currently most popular movies' projectImgSrcUrl={DRMImage} moreDetailsSubtitle="Read more about DRM below" moreDetailsDescription='I created this movie browsing app for two reasons.
 These are 1. for practice, and 2. to show competence with Redux state management as well as handling 3rd-party API data fetching for potential employers.' projectGithubLink="https://github.com/davidronnlid/movie-project"/></Item>
