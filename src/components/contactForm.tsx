@@ -5,14 +5,14 @@ import Button from "@mui/material/Button"
   interface ContactFormProps {
         title?: string;
         actionDescription: string;
-        FORM_ENDPOINT: string;
+        formEndpoint: string;
       };
 
-  const ContactForm = ({title, actionDescription, FORM_ENDPOINT}: ContactFormProps):JSX.Element => {
+  const ContactForm = ({title, actionDescription, formEndpoint}: ContactFormProps):JSX.Element => {
     return (<Box>
-      {title?title:""}
+      {title?title: null}
 <form
-        action={FORM_ENDPOINT}
+        action={formEndpoint}
         method="POST"
         target="_blank"
       >
