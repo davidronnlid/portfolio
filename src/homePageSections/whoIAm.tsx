@@ -19,8 +19,8 @@ import Grid from '@mui/material/Grid';
       }}
     children={<Grid container sx={{width: "80%", mx: "auto", flexDirection:  "row"}}>
         <Grid item xs={12} md={3}><ProgressBars progBarsData={progBarsData} metaTitle="Tech competencies" /></Grid>
-        <Grid item xs={0} md={1}><Divider flexItem={true} orientation="vertical" sx={{mx: 7}} /></Grid>
-        <Grid item xs={12} md={8}>
+        <Grid item xs={0} md={3}><Divider flexItem={true} orientation="vertical" sx={{height: "100%", width:"1px", mx: "auto"}} /></Grid>
+        <Grid item xs={12} md={6}>
   {title ? <Typography variant="h5">{title}</Typography> : ""}
         <Typography variant="h6">Vision and how I spend my time</Typography>
         <Typography variant="body1" align='left'>I am a 21-year-old front-end developer from Sweden. ReactJS is what I am best at and I would love to work with challenging projects that involve ReactJS. Currently, I live in Uppsala and am currently studying to become a medical doctor and psychologist. However, it is not intellectually stimulating enough and I find myself spending hours of my free time every week developing web apps to feel like I am learning as fast as I want to. Mainly for this reason, I would like to work with front-end development at the same time as studying at 100% pace (40h/week). During the spring term 2022 I studied both the medical doctor and psychologist programme and passed all courses by far. So I am not just hoping or speculating that I have it in me to work full time or part time at the same time as studying at this pace. There is historical evidence of my own work ethic during conditions of high workload and stressful exam weeks to back this idea.</Typography>
