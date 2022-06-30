@@ -1,48 +1,49 @@
 import Box from '@mui/material/Box';
-  import { useState } from "react";
-      
+import TextField from "@mui/material/TextField"
+import Button from "@mui/material/Button"
+
   interface ContactFormProps {
-        title: string;
+        title?: string;
+        actionDescription: string;
         FORM_ENDPOINT: string;
       };
 
-  const ContactForm = ({title, FORM_ENDPOINT}: ContactFormProps):JSX.Element => {
-    const [submitted, setSubmitted] = useState(false);
-    const handleSubmit = () => {
-      setTimeout(() => {
-        setSubmitted(true);
-      }, 100);
-    };
-
-    
-    return (<Box
-        >{submitted ?
-              <>
-                <h2>Thank you!</h2>
-#Contact                <div>We'll be in touch soon.</div>
-              </>
-            :
-        
-        
+  const ContactForm = ({title, actionDescription, FORM_ENDPOINT}: ContactFormProps):JSX.Element => {
+    return (<Box>
+      {title?title:""}
 <form
         action={FORM_ENDPOINT}
-        onSubmit={handleSubmit}
         method="POST"
         target="_blank"
       >
-        <div>
-          <input type="text" placeholder="Your name" name="name" required />
-        </div>
-        <div>
-          <input type="email" placeholder="Email" name="email" required />
-        </div>
-        <div>
-          <textarea placeholder="Your message" name="message" required />
-        </div>
-        <div>
-          <button type="submit"> Send a message </button>
-        </div>
-      </form>        }{title}
+<Box>         <TextField
+          label="Your Name"
+          defaultValue=""
+          placeholder='David Rönnlid'
+          type="text"
+          margin='normal'
+        />
+     </Box>   <Box><TextField
+          required
+          label="Your Email"
+          defaultValue=""
+          placeholder='david.ronnlid@gmail.com'
+          type="email"
+          margin='normal'
+
+        />
+        </Box><Box><TextField
+          required
+          label="Your Message"
+          defaultValue=""
+          placeholder='I think your portfolio would be better if... or: We want to work with you... or: Something else...'
+          multiline
+          type="text"
+          margin='normal'
+        />
+        </Box>
+        <Button type="submit" variant='outlined' color='primary' sx={{mb: 2}}>{actionDescription}</Button>
+      </form>        
       </Box>);
   }
   

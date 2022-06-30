@@ -22,6 +22,6 @@
   },
   "include": [
     "src"
-, "src/pageSections"  ]
+, "src/homePageSections"  ]
 }
 

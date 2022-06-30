@@ -2,7 +2,7 @@ import { Typography } from '@mui/material';
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 import SimpleCollapse from '../components/simpleCollapse';
-import ProgressBars from "../pageSections/progressBars";
+import ProgressBars from "./progressBars";
 import Divider from '@mui/material/Divider';
 import { SiTypescript, SiRedux, SiNodedotjs, SiReact, SiHtml5, SiCss3, SiJavascript, SiGoogle, SiGit } from 'react-icons/si';
 import Grid from '@mui/material/Grid';

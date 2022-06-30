@@ -1,7 +1,7 @@
 import  PageSection from "../components/pageSection";
-import  Portfolio from '../pageSections/portfolio';
-import  WhoIAm from '../pageSections/whoIAm';
-import  Contact from '../pageSections/contact';
+import  Portfolio from '../homePageSections/portfolio';
+import  WhoIAm from '../homePageSections/whoIAm';
+import  Contact from '../homePageSections/contact';
 
 interface HomePageProps {
         title?: string;

@@ -19,9 +19,7 @@ const Contact = ({title, id}: ContactProps):JSX.Element => <Box
 
 {title ? <Typography variant="h5">{title}</Typography> : ""}
 
-<Typography variant="subtitle1">Contact form coming soon...</Typography>
-<br/>
-<ContactForm title="Contact form titleProp" FORM_ENDPOINT={FORM_ENDPOINT}/> 
+<ContactForm actionDescription="Send email" FORM_ENDPOINT={FORM_ENDPOINT}/> 
 <Typography variant="h6" sx={{mb:1}}>Connect via LinkedIn or view my code on GitHub</Typography>
 
 <TooltipLink title="Davids LinkedIn page" link="https://linkedin.com/in/davidronnlid/" icon={<FaLinkedinIn style={{height: "50px", width: "50px", marginRight: "20%"}}/>}/>
