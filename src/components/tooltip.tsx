@@ -3,7 +3,7 @@ import IconButton from '@mui/material/IconButton';
 import Link from '@mui/material/Link';
       
 interface TooltipLinkProps {
-        icon: any;
+        icon: JSX.Element;
         link: string;
         title: string;
       };
