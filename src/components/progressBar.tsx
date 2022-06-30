@@ -5,7 +5,7 @@ import LinearProgress, {
 import Typography from "@mui/material/Typography";
 import TooltipLink from "./tooltip";
 
-const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
+const BorderLinearProg = styled(LinearProgress)(({ theme }) => ({
   height: 10,
   width: "100%",
   borderRadius: 5,
@@ -19,17 +19,17 @@ const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
   }
 }));
 
-interface progressAmount {
+export interface ProgBarProps {
     title: string;
     percentage: number;
     icon: JSX.Element;
     link: string; 
 }
 
-export default function ProgressBar({title, percentage, icon, link}: progressAmount) {
+export default function ProgBar({title, percentage, icon, link}: ProgBarProps) {
   return (<><Typography textAlign="left"
   variant='h6' children={<><TooltipLink icon={icon} title={title} link={link}/>
 
-  <BorderLinearProgress variant="determinate" value={percentage} sx={{mb:3}}/>
+  <BorderLinearProg variant="determinate" value={percentage} sx={{mb:3}}/>
   </>} /></>);
 }

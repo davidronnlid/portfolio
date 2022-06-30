@@ -1,22 +1,18 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import ProgressBar from "./progressBar";
+import ProgBar, {ProgBarProps} from "./progressBar";
 
-interface ProgressBarsProps {
+type ProgBarPropsTypes = ProgBarProps;
+
+interface ProgBarsProps {
   metaTitle?: string;
-  progBarsData: any;
-}
-interface progBarProps {
-  title: string;
-  percentage: number;
-  icon: any;
-  link: string;
+  progBarsData: ProgBarPropsTypes[];
 }
 
-const ProgressBars = ({
+const ProgBars = ({
   metaTitle,
   progBarsData,
-}: ProgressBarsProps): JSX.Element => (
+}: ProgBarsProps): JSX.Element => (
   <Box
     sx={{  my: 1 }}
     >
@@ -29,9 +25,9 @@ const ProgressBars = ({
           ""
         )}
 <Box sx={{display: { xs: "flex", md: "flex" }, flexDirection: "column"}}>{progBarsData.map(
-          (progBarData: progBarProps) =>
+          (progBarData: ProgBarProps) =>
             (
-              <ProgressBar
+              <ProgBar
                 title={progBarData.title}
                 percentage={progBarData.percentage}
                 icon={progBarData.icon}
@@ -44,4 +40,4 @@ const ProgressBars = ({
 </Box> 
 );
 
-export default ProgressBars;
+export default ProgBars;
