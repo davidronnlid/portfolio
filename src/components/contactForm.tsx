@@ -42,7 +42,7 @@ import Button from "@mui/material/Button"
           margin='normal'
         />
         </Box>
-        <Button type="submit" variant='outlined' color='primary' sx={{mb: 2}}>{actionDescription}</Button>
+        <Button type="submit" value="Download CTA" variant='outlined' color='primary' sx={{mb: 2}}>{actionDescription}</Button>
       </form>        
       </Box>);
   }
