@@ -2,12 +2,13 @@ import Box from '@mui/material/Box';
 import TextField from "@mui/material/TextField"
 import Button from "@mui/material/Button"
 import InputLabel from '@mui/material/InputLabel';
+import * as React from "react"
 
   interface ContactFormProps {
         title?: string;
         actionDescription: string;
         formEndpoint: string;
-      };
+      }
 
   const ContactForm = ({title, actionDescription, formEndpoint}: ContactFormProps):JSX.Element => {
     return (<Box>
