@@ -22,12 +22,7 @@ const Item = styled(Paper)(({ theme }) => ({
   }
 
   const Portfolio = ({title, id}: PortfolioProps):JSX.Element => <Box
-  
-  id={id}      
-  sx={{ display: { xs: 'flex', md: 'flex' }, my: 1
-          }}
-        children={<>
-        
+  id={id} sx={{ display: { xs: 'flex', md: 'flex' }, my: 1}}>
         <Box sx={{width: "80%", mx: "auto"}}>
         {title ? <Typography variant="h5">{title}</Typography> : ""}
             <Box sx={{ flexGrow: 1 }}>
@@ -44,7 +39,6 @@ These are 1. for practice, and 2. to show competence with Redux state management
         </Grid>
       </Box>
       </Box>
-      </>}
-      />
+      </Box>
 
   export default Portfolio;
