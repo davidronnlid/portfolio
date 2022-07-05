@@ -41,4 +41,4 @@ These are 1. for practice, and 2. to show competence with Redux state management
       </Box>
       </Box>
 
-  export default Portfolio;
+  export default Portfolio

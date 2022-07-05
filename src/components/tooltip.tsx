@@ -1,16 +1,20 @@
-import Tooltip from '@mui/material/Tooltip';
-import IconButton from '@mui/material/IconButton';
-import Link from '@mui/material/Link';
-      
+import Tooltip from '@mui/material/Tooltip'
+import IconButton from '@mui/material/IconButton'
+import Link from '@mui/material/Link'
+import React from 'react'
+
 interface TooltipLinkProps {
-        icon: JSX.Element;
-        link: string;
-        title: string;
-      };
+    icon: JSX.Element
+    link: string
+    title: string
+}
 
-  const TooltipLink = ({icon, link, title }: TooltipLinkProps):JSX.Element => <Tooltip
-        title={title}
-        children={<IconButton><Link href={link}>{icon}</Link></IconButton>}
-      />
+const TooltipLink = ({ icon, link, title }: TooltipLinkProps): JSX.Element => (
+    <Tooltip title={title}>
+        <IconButton>
+            <Link href={link}>{icon}</Link>
+        </IconButton>
+    </Tooltip>
+)
 
-  export default TooltipLink;
+export default TooltipLink
