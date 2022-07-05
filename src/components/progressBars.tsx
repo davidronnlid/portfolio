@@ -6,20 +6,12 @@ import * as React from 'react'
 type ProgBarPropsTypes = ProgBarProps
 
 interface ProgBarsProps {
-    metaTitle?: string
     progBarsData: ProgBarPropsTypes[]
 }
 
-const ProgBars = ({ metaTitle, progBarsData }: ProgBarsProps): JSX.Element => (
+const ProgBars = ({ progBarsData }: ProgBarsProps): JSX.Element => (
     <Box sx={{ my: 1 }}>
         <>
-            {metaTitle ? (
-                <Typography align="left" variant="h6">
-                    {metaTitle}
-                </Typography>
-            ) : (
-                ''
-            )}
             <Box
                 sx={{
                     display: { xs: 'flex', md: 'flex' },

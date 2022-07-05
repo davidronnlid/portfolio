@@ -157,10 +157,10 @@ const WhoIam = ({ title, id }: WhoIamProps): JSX.Element => {
                 />
             </Grid>
             <Grid item xs={12} md={3}>
-                <ProgressBars
-                    progBarsData={progBarsData}
-                    metaTitle="Tech competencies"
-                />
+                <Typography align="left" variant="h6">
+                    Tech competences
+                </Typography>
+                <ProgressBars progBarsData={progBarsData} />
             </Grid>
         </Grid>
     )

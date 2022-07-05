@@ -3,12 +3,13 @@ import LinearProgress, {
     linearProgressClasses,
 } from '@mui/material/LinearProgress'
 import Typography from '@mui/material/Typography'
+import Grid from '@mui/material/Grid'
 import TooltipLink from './tooltip'
 import * as React from 'react'
 
 const BorderLinearProg = styled(LinearProgress)(({ theme }) => ({
     height: 10,
-    width: '100%',
+    width: '70%',
     borderRadius: 5,
     [`&.${linearProgressClasses.colorPrimary}`]: {
         backgroundColor:
@@ -34,16 +35,19 @@ export default function ProgBar({
     link,
 }: ProgBarProps) {
     return (
-        <>
-            <Typography align="left" variant="h6">
-                <TooltipLink icon={icon} title={title} link={link} />
-            </Typography>
-
-            <BorderLinearProg
-                variant="determinate"
-                value={percentage}
-                sx={{ mb: 3 }}
-            />
-        </>
+        <Grid container>
+            <Grid item sx={{ width: '20%' }}>
+                <Typography align="left" variant="h6">
+                    <TooltipLink icon={icon} title={title} link={link} />
+                </Typography>
+            </Grid>
+            <Grid item>
+                <BorderLinearProg
+                    variant="determinate"
+                    value={percentage}
+                    sx={{ mb: 3 }}
+                />
+            </Grid>
+        </Grid>
     )
 }

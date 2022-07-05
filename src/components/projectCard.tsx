@@ -18,8 +18,6 @@ interface ExpandMoreProps extends IconButtonProps {
 }
 
 const ExpandMore = styled((props: ExpandMoreProps) => {
-    // Disabling below command because it wrongfully logged error
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { expand, ...other } = props
     return <IconButton {...other} />
 })(({ theme, expand }) => ({
