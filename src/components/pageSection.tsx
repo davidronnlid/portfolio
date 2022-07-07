@@ -1,18 +1,12 @@
 import * as React from 'react'
-import { Typography } from '@mui/material'
+import { Box } from '@mui/material'
 
 interface PageSectionProps {
-    title?: string
     comp: React.ReactElement
 }
 
-const PageSection = ({ title, comp }: PageSectionProps): JSX.Element => (
-    <>
-        <Typography variant="h4" align="left" sx={{ my: 2 }}>
-            {title}
-        </Typography>
-        {comp}
-    </>
+const PageSection = ({ comp }: PageSectionProps): JSX.Element => (
+    <Box sx={{ width: '100%', height: '100vh' }}>{comp}</Box>
 )
 
 export default PageSection
