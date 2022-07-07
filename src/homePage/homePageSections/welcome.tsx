@@ -4,7 +4,7 @@ import Link from '@mui/material/Link'
 import Typography from '@mui/material/Typography'
 import { GiEnergyArrow } from 'react-icons/gi'
 import { IconContext } from 'react-icons'
-import noBGConfidentSmile from '../../images/noBGConfidentSmile.png'
+import noBGConfidentSmile from '../images/noBGConfidentSmile.png'
 import { useTheme } from '@mui/material/styles'
 import useMediaQuery from '@mui/material/useMediaQuery'
 
