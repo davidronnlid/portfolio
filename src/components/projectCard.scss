@@ -1,0 +1,40 @@
+.projectGithubIcon {
+    color: var(--secondary-color);
+    margin: 2.5rem auto 1rem auto;
+}
+
+.projectContainer {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.mobileProjectContainer {
+    width: 92%;
+    top: -0.5vw;
+}
+
+.mobileContainerImg {
+    position: relative;
+    width: 100%;
+}
+
+.mobileProjectImg {
+    width: 80%;
+    position: absolute;
+    top: 4%;
+    left: 10%;
+    border-radius: 2rem;
+}
+
+.desktopContainerImg {
+    width: 100%;
+    position: relative;
+}
+
+.desktopProjectImg {
+    width: 95.2%;
+    top: 5%;
+    left: 1%;
+    position: absolute;
+}

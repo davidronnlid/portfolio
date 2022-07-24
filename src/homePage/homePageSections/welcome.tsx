@@ -59,7 +59,7 @@ const Welcome = ({ title, subTitle }: PortfolioProps): JSX.Element => {
             {matches ? (
                 <img
                     src={noBGConfidentSmile}
-                    alt={'David, happy as usual'}
+                    alt="David, happy as usual"
                     className="noBGImgOfDavid"
                 />
             ) : (
@@ -70,7 +70,7 @@ const Welcome = ({ title, subTitle }: PortfolioProps): JSX.Element => {
                     value={{
                         color: 'var(--secondary-color)',
                         className: 'global-class-name',
-                        size: '20vh',
+                        size: '7vh',
                         style: { position: 'absolute', left: 0, bottom: '5vh' },
                     }}
                 >

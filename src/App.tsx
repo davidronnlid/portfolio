@@ -1,9 +1,17 @@
 import * as React from 'react'
-import './App.css'
+import './App.scss'
+import BackToTop from './components/topScroll'
 import HomePage from './homePage/home'
 
 function App() {
-    return <HomePage />
+    return (
+        <>
+            <BackToTop children={<></>} />
+            <span style={{ display: 'hidden' }} id="back-to-top-anchor"></span>
+
+            <HomePage />
+        </>
+    )
 }
 
 export default App

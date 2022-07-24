@@ -5,8 +5,7 @@ import Paper from '@mui/material/Paper'
 import ProjectCard from '../../components/projectCard'
 import DRMImage from '../images/dRMScreenshot.png'
 import CalcAppImage from '../images/calcAppScreenshot.png'
-import { Typography } from '@mui/material'
-import './portfolio.css'
+import { Grid, Typography } from '@mui/material'
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -25,22 +24,23 @@ const Portfolio = ({ title }: PortfolioProps): JSX.Element => (
         <Typography variant="h3" sx={{ pt: '30px' }}>
             {title}
         </Typography>
-
-        <ProjectCard
-            visitProjectLink="https://davidronnlidcalculator.netlify.app"
-            title="Calculator"
-            imgSrcUrl={CalcAppImage}
-            imgAlt="Title app"
-            projectGithubLink="https://github.com/davidronnlid/calculator-app"
-        />
-
-        <ProjectCard
-            visitProjectLink="https://davidronnlidmovies.netlify.app"
-            title="Movie Browser"
-            imgSrcUrl={DRMImage}
-            imgAlt="Title app"
-            projectGithubLink="https://github.com/davidronnlid/movie-project"
-        />
+        <Grid container spacing={3}>
+            {' '}
+            <ProjectCard
+                visitProjectLink="https://davidronnlidmovies.netlify.app"
+                title="Movie Browser"
+                imgSrcUrl={DRMImage}
+                containerImg="Desktop"
+                projectGithubLink="https://github.com/davidronnlid/movie-project"
+            />{' '}
+            <ProjectCard
+                visitProjectLink="https://davidronnlidcalculator.netlify.app"
+                title="Calculator"
+                imgSrcUrl={CalcAppImage}
+                containerImg="Mobile"
+                projectGithubLink="https://github.com/davidronnlid/calculator-app"
+            />
+        </Grid>
     </Box>
 )
 
