@@ -16,7 +16,7 @@ const TooltipLink = ({ icon, link, title }: TooltipLinkProps): JSX.Element => (
             <Link href={link}>
                 <IconContext.Provider
                     value={{
-                        className: 'global-class-name',
+                        color: 'var(--secondary-color)',
                     }}
                 >
                     {icon}

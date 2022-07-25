@@ -11,14 +11,7 @@ interface HomePageProps {
 const HomePage = ({ title }: HomePageProps): JSX.Element => (
     <Box sx={{ width: '80%', mx: 'auto' }}>
         {title ? title : ''}
-        <PageSection
-            comp={
-                <Welcome
-                    title="Hi, I am David."
-                    subTitle="React and TypeScript developer."
-                />
-            }
-        />
+        <PageSection comp={<Welcome />} />
         <PageSection comp={<Portfolio title="Portfolio" />} />
     </Box>
 )

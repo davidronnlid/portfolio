@@ -4,18 +4,17 @@ import Link from '@mui/material/Link'
 import Typography from '@mui/material/Typography'
 import { GiEnergyArrow } from 'react-icons/gi'
 import { IconContext } from 'react-icons'
+import { SiReact, SiTypescript } from 'react-icons/si'
 import noBGConfidentSmile from '../images/noBGConfidentSmile.png'
 import { useTheme } from '@mui/material/styles'
 import useMediaQuery from '@mui/material/useMediaQuery'
+import './welcome.scss'
+import { Tooltip } from '@mui/material'
+import TooltipLink from '../../components/tooltip'
 
-interface PortfolioProps {
-    title: string
-    subTitle: string
-}
-
-const Welcome = ({ title, subTitle }: PortfolioProps): JSX.Element => {
+const Welcome = (): JSX.Element => {
     const theme = useTheme()
-    const matches = useMediaQuery(theme.breakpoints.up('md'))
+    const mediumScreen = useMediaQuery(theme.breakpoints.up('md'))
 
     return (
         <Box
@@ -33,7 +32,7 @@ const Welcome = ({ title, subTitle }: PortfolioProps): JSX.Element => {
                     top: '10vh',
                 }}
             >
-                {title}
+                Hi, I am David Rönnlid.
             </Typography>
             <Typography
                 variant="h5"
@@ -45,18 +44,12 @@ const Welcome = ({ title, subTitle }: PortfolioProps): JSX.Element => {
                     top: '10vh',
                 }}
             >
-                <span
-                    style={{
-                        background: 'var(--secondary-color)',
-                        padding: '5px',
-                        marginLeft: '-10px',
-                    }}
-                >
-                    {subTitle}
+                <span className="subtitle">
+                    React and TypeScript developer.{' '}
                 </span>
             </Typography>
 
-            {matches ? (
+            {mediumScreen ? (
                 <img
                     src={noBGConfidentSmile}
                     alt="David, happy as usual"

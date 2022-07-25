@@ -39,6 +39,7 @@ export default function ProjectCard({
                             alt={'Davids ' + { title } + ' project.'}
                             src={imgSrcUrl}
                             className="mobileProjectImg"
+                            loading="lazy"
                         />
                         <img
                             alt={
@@ -47,6 +48,7 @@ export default function ProjectCard({
                                 { title }.toString().toLowerCase() +
                                 ' project.'
                             }
+                            loading="lazy"
                             src={iPhone}
                             className="mobileContainerImg"
                         />
