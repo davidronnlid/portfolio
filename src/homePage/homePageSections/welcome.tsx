@@ -62,14 +62,11 @@ const Welcome = (): JSX.Element => {
                 <IconContext.Provider
                     value={{
                         color: 'var(--secondary-color)',
-                        className: 'global-class-name',
                         size: '7vh',
                         style: { position: 'absolute', left: 0, bottom: '5vh' },
                     }}
                 >
-                    <div>
-                        <GiEnergyArrow />
-                    </div>
+                    <GiEnergyArrow />
                 </IconContext.Provider>
             </Link>
         </Box>
