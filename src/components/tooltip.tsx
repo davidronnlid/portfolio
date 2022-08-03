@@ -2,7 +2,6 @@ import Tooltip from '@mui/material/Tooltip'
 import IconButton from '@mui/material/IconButton'
 import Link from '@mui/material/Link'
 import { IconContext } from 'react-icons'
-import React from 'react'
 
 interface TooltipLinkProps {
     icon: JSX.Element

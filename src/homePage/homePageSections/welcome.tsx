@@ -1,18 +1,22 @@
-import * as React from 'react'
 import Box from '@mui/material/Box'
 import Link from '@mui/material/Link'
 import Typography from '@mui/material/Typography'
 import { GiEnergyArrow } from 'react-icons/gi'
 import { IconContext } from 'react-icons'
-import { SiReact, SiTypescript } from 'react-icons/si'
 import noBGConfidentSmile from '../images/noBGConfidentSmile.png'
 import { useTheme } from '@mui/material/styles'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import './welcome.scss'
-import { Tooltip } from '@mui/material'
-import TooltipLink from '../../components/tooltip'
 
-const Welcome = (): JSX.Element => {
+interface WelcomeProps {
+    title: string
+    subTitle: string
+}
+
+const Welcome: React.FC<WelcomeProps> = ({
+    title,
+    subTitle,
+}: WelcomeProps): JSX.Element => {
     const theme = useTheme()
     const mediumScreen = useMediaQuery(theme.breakpoints.up('md'))
 
@@ -32,7 +36,7 @@ const Welcome = (): JSX.Element => {
                     top: '10vh',
                 }}
             >
-                Hi, I am David Rönnlid.
+                {title}
             </Typography>
             <Typography
                 variant="h5"
@@ -44,9 +48,7 @@ const Welcome = (): JSX.Element => {
                     top: '10vh',
                 }}
             >
-                <span className="subtitle">
-                    React and TypeScript developer.{' '}
-                </span>
+                <span className="subtitle">{subTitle}</span>
             </Typography>
 
             {mediumScreen ? (

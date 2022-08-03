@@ -17,6 +17,8 @@
 .mobileContainerImg {
     position: relative;
     width: 100%;
+    -webkit-filter: drop-shadow(0 0 0.75rem var(--tertiary-color));
+    filter: drop-shadow(0 0 0.75rem var(--tertiary-color));
 }
 
 .mobileProjectImg {
@@ -30,6 +32,8 @@
 .desktopContainerImg {
     width: 100%;
     position: relative;
+    -webkit-filter: drop-shadow(0 0 0.75rem var(--tertiary-color));
+    filter: drop-shadow(0 0 0.75rem var(--tertiary-color));
 }
 
 .desktopProjectImg {

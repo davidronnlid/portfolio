@@ -4,19 +4,11 @@ import Fade from '@mui/material/Fade'
 import Box from '@mui/material/Box'
 import useScrollTrigger from '@mui/material/useScrollTrigger'
 
-// All you have to do to implement scroll to top with this component is:
-// 1. Add #back-to-top-anchor to a span (<span style={{ display: 'hidden' }} id="back-to-top-anchor"></span>)
-// 2. npm i -s for:
-// "@material-ui/core": "^4.12.3",
-// "@material-ui/icons": "^4.11.2",
-// "@mui/icons-material": "^5.8.4",
-// "@mui/material": "^5.1.0",
-// 3. Render this component in your app
-
 interface ScrollTopProps {
-    children: React.ReactElement
+    children: JSX.Element
 }
-function ScrollTop(props: ScrollTopProps) {
+
+const ScrollTop: React.FC<ScrollTopProps> = (props: ScrollTopProps) => {
     const { children } = props
     const trigger = useScrollTrigger({
         target: window,
@@ -48,7 +40,7 @@ function ScrollTop(props: ScrollTopProps) {
     )
 }
 
-export default function BackToTop(props: ScrollTopProps) {
+const BackToTop: React.FC<ScrollTopProps> = (props: ScrollTopProps) => {
     return (
         <ScrollTop {...props}>
             <Fab size="small" aria-label="scroll back to top">
@@ -57,3 +49,17 @@ export default function BackToTop(props: ScrollTopProps) {
         </ScrollTop>
     )
 }
+
+export default BackToTop
+
+// Instructions for me or others looking to reuse this component in future projects:
+// All you have to do to implement scroll to top with this component is:
+// 1. Add #back-to-top-anchor to a span (<span style={{ display: 'hidden' }} id="back-to-top-anchor"></span>)
+// 2. npm i -s for:
+// "@material-ui/core": "^4.12.3",
+// "@material-ui/icons": "^4.11.2",
+// "@mui/icons-material": "^5.8.4",
+// "@mui/material": "^5.1.0",
+// 3. Render this component in your app
+
+// This component is a modified version of https://mui.com/material-ui/react-app-bar/#back-to-top

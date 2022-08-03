@@ -5,7 +5,9 @@ interface PageSectionProps {
     comp: React.ReactElement
 }
 
-const PageSection = ({ comp }: PageSectionProps): JSX.Element => (
+const PageSection: React.FC<PageSectionProps> = ({
+    comp,
+}: PageSectionProps): JSX.Element => (
     <Box sx={{ width: '100%', height: '100vh' }}>{comp}</Box>
 )
 

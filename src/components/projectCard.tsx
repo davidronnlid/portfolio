@@ -1,5 +1,4 @@
 import * as React from 'react'
-import Typography from '@mui/material/Typography'
 import Link from '@mui/material/Link'
 import Box from '@mui/material/Box'
 import { BsGithub } from 'react-icons/bs'
@@ -17,13 +16,13 @@ interface ProjectCardProps {
     projectGithubLink: string
 }
 
-export default function ProjectCard({
+const ProjectCard: React.FC<ProjectCardProps> = ({
     imgSrcUrl,
     containerImg,
     title,
     visitProjectLink,
     projectGithubLink,
-}: ProjectCardProps) {
+}: ProjectCardProps) => {
     return (
         <Grid item md={containerImg === 'Desktop' ? 8 : 4}>
             <Link href={visitProjectLink}>
@@ -31,8 +30,7 @@ export default function ProjectCard({
                     icon={<BsGithub className="projectGithubIcon" />}
                     title="Project Github Link"
                     link={projectGithubLink}
-                />{' '}
-                {/* <Box className="imgContainer"> */}
+                />
                 {containerImg === 'Mobile' ? (
                     <Box className="projectContainer mobileProjectContainer">
                         <img
@@ -76,3 +74,5 @@ export default function ProjectCard({
         </Grid>
     )
 }
+
+export default ProjectCard

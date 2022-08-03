@@ -6,7 +6,7 @@ import TooltipLink from './tooltip'
 import Box from '@mui/material/Box'
 import { Icon } from '@mui/material'
 
-const MainCTA: React.FunctionComponent = (): JSX.Element => {
+const MainCTA: React.FC = (): JSX.Element => {
     return (
         <Box
             sx={{
@@ -23,10 +23,10 @@ const MainCTA: React.FunctionComponent = (): JSX.Element => {
                 icon={
                     <IconContext.Provider
                         value={{
-                            color: 'var(--secondary-color)',
+                            color: 'var(--button-color)',
                             size: '3rem',
                             style: {
-                                backgroundColor: 'var(--button-color)',
+                                backgroundColor: 'var(--secondary-color)',
                                 border: 'none',
                                 borderRadius: '0.6rem',
                                 boxShadow: 'var(--std-bs)',
@@ -44,13 +44,3 @@ const MainCTA: React.FunctionComponent = (): JSX.Element => {
 }
 
 export default MainCTA
-
-{
-    /* <IconContext.Provider
-value={{
-    size: '2vw',
-}}
->
-<SiLinkedin />
-</IconContext.Provider> */
-}
