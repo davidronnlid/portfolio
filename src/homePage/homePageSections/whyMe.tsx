@@ -23,7 +23,7 @@ const WhyMe: React.FC<WhyMeProps> = ({ title }: WhyMeProps): JSX.Element => {
                 </li>
                 <li>
                     <Typography variant="body1">
-                        I'm a passionate junior front-end developer specialized
+                        I am a passionate junior front-end developer specialized
                         in React and TypeScript
                     </Typography>
                 </li>

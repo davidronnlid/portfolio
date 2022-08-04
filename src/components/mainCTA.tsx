@@ -18,6 +18,7 @@ const MainCTA: React.FC = (): JSX.Element => {
                 margin: 0,
                 zIndex: 100,
             }}
+            data-testid="MainCTA"
         >
             <TooltipLink
                 icon={

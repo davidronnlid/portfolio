@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders main CTA correctly 1`] = `
+<div
+  className="MuiBox-root css-1e7ldzq"
+  data-testid="MainCTA"
+>
+  <button
+    aria-label="Contact David via LinkedIn"
+    aria-labelledby={null}
+    className="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-78trlr-MuiButtonBase-root-MuiIconButton-root"
+    data-mui-internal-clone-element={true}
+    disabled={false}
+    onBlur={[Function]}
+    onContextMenu={[Function]}
+    onDragLeave={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    tabIndex={0}
+    type="button"
+  >
+    <a
+      className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1ps4owl-MuiTypography-root-MuiLink-root"
+      href="https://www.linkedin.com/in/davidronnlid/"
+      onBlur={[Function]}
+      onFocus={[Function]}
+    >
+      <svg
+        fill="currentColor"
+        height="3rem"
+        role="img"
+        stroke="currentColor"
+        strokeWidth="0"
+        style={
+          Object {
+            "backgroundColor": "var(--secondary-color)",
+            "border": "none",
+            "borderRadius": "0.6rem",
+            "boxShadow": "var(--std-bs)",
+            "color": "var(--button-color)",
+          }
+        }
+        viewBox="0 0 24 24"
+        width="3rem"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title />
+        <path
+          d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+        />
+      </svg>
+    </a>
+    <span
+      className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+    />
+  </button>
+</div>
+`;
