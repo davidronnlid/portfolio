@@ -16,5 +16,5 @@
         "noEmit": true,
         "jsx": "react-jsx"
     },
-    "include": ["src", "src/homePage/homePageSections"]
+    "include": ["src", "src/homePage/homePageSections", "src/setupTests.ts"]
 }

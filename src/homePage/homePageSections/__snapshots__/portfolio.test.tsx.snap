@@ -15,7 +15,7 @@ exports[`renders the portfolio page section correctly 1`] = `
       className="MuiGrid-root MuiGrid-item MuiGrid-grid-md-8 css-am41oj-MuiGrid-root"
     >
       <button
-        aria-label="Project Github Link"
+        aria-label="Project Tooltip Github Link"
         aria-labelledby={null}
         className="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-78trlr-MuiButtonBase-root-MuiIconButton-root"
         data-mui-internal-clone-element={true}
@@ -38,6 +38,7 @@ exports[`renders the portfolio page section correctly 1`] = `
       >
         <a
           className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1ps4owl-MuiTypography-root-MuiLink-root"
+          data-testid="github-link"
           href="https://github.com/davidronnlid/movie-project"
           onBlur={[Function]}
           onFocus={[Function]}
@@ -77,12 +78,12 @@ exports[`renders the portfolio page section correctly 1`] = `
           className="projectContainer MuiBox-root css-0"
         >
           <img
-            alt="Davids [object Object] project."
+            alt="Davids Movie Browser project."
             className="desktopProjectImg"
             src="dRMScreenshot.png"
           />
           <img
-            alt="Desktop screen displays Davids [object object] project."
+            alt="Desktop screen displays Davids movie browser project."
             className="desktopContainerImg"
             src="Mac.png"
           />
@@ -93,7 +94,7 @@ exports[`renders the portfolio page section correctly 1`] = `
       className="MuiGrid-root MuiGrid-item MuiGrid-grid-md-4 css-1ube6tp-MuiGrid-root"
     >
       <button
-        aria-label="Project Github Link"
+        aria-label="Project Tooltip Github Link"
         aria-labelledby={null}
         className="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-78trlr-MuiButtonBase-root-MuiIconButton-root"
         data-mui-internal-clone-element={true}
@@ -116,6 +117,7 @@ exports[`renders the portfolio page section correctly 1`] = `
       >
         <a
           className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1ps4owl-MuiTypography-root-MuiLink-root"
+          data-testid="github-link"
           href="https://github.com/davidronnlid/calculator-app"
           onBlur={[Function]}
           onFocus={[Function]}
@@ -155,13 +157,13 @@ exports[`renders the portfolio page section correctly 1`] = `
           className="projectContainer mobileProjectContainer MuiBox-root css-0"
         >
           <img
-            alt="Davids [object Object] project."
+            alt="Davids Calculator project."
             className="mobileProjectImg"
             loading="lazy"
             src="calcAppScreenshot.png"
           />
           <img
-            alt="Mobile screen displays Davids [object object] project."
+            alt="Mobile screen displays Davids calculator project."
             className="mobileContainerImg"
             loading="lazy"
             src="iPhone.png"

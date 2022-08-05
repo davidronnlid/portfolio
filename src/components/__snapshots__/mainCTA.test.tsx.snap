@@ -1,9 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders main CTA correctly 1`] = `
+exports[`renders main CTA 1`] = `
 <div
+  aria-label="MainCTA"
   className="MuiBox-root css-1e7ldzq"
-  data-testid="MainCTA"
+  role="MUIBox"
 >
   <button
     aria-label="Contact David via LinkedIn"
@@ -29,6 +30,7 @@ exports[`renders main CTA correctly 1`] = `
   >
     <a
       className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1ps4owl-MuiTypography-root-MuiLink-root"
+      data-testid="github-link"
       href="https://www.linkedin.com/in/davidronnlid/"
       onBlur={[Function]}
       onFocus={[Function]}

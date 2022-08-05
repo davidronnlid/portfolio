@@ -27,14 +27,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         <Grid item md={containerImg === 'Desktop' ? 8 : 4}>
             <TooltipLink
                 icon={<BsGithub className="projectGithubIcon" />}
-                title="Project Github Link"
+                title="Project Tooltip Github Link"
                 link={projectGithubLink}
             />{' '}
             <Link href={visitProjectLink}>
                 {containerImg === 'Mobile' ? (
                     <Box className="projectContainer mobileProjectContainer">
                         <img
-                            alt={'Davids ' + { title } + ' project.'}
+                            alt={'Davids ' + title + ' project.'}
                             src={imgSrcUrl}
                             className="mobileProjectImg"
                             loading="lazy"
@@ -43,7 +43,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                             alt={
                                 containerImg +
                                 ' screen displays Davids ' +
-                                { title }.toString().toLowerCase() +
+                                title.toLowerCase() +
                                 ' project.'
                             }
                             loading="lazy"
@@ -54,15 +54,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 ) : (
                     <Box className="projectContainer">
                         <img
-                            alt={'Davids ' + { title } + ' project.'}
                             src={imgSrcUrl}
                             className="desktopProjectImg"
+                            alt={'Davids ' + title + ' project.'}
                         />
                         <img
                             alt={
                                 containerImg +
                                 ' screen displays Davids ' +
-                                { title }.toString().toLowerCase() +
+                                title.toLowerCase() +
                                 ' project.'
                             }
                             src={Mac}

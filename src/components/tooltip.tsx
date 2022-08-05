@@ -12,7 +12,7 @@ interface TooltipLinkProps {
 const TooltipLink = ({ icon, link, title }: TooltipLinkProps): JSX.Element => (
     <Tooltip title={title}>
         <IconButton>
-            <Link href={link}>
+            <Link href={link} data-testid="github-link">
                 <IconContext.Provider
                     value={{
                         color: 'var(--secondary-color)',
