@@ -67,9 +67,9 @@ exports[`renders the portfolio page section correctly 1`] = `
           className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
         />
       </button>
-       
       <a
         className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1ps4owl-MuiTypography-root-MuiLink-root"
+        data-cy="movie-browser-project-link"
         href="https://davidronnlidmovies.netlify.app"
         onBlur={[Function]}
         onFocus={[Function]}
@@ -146,9 +146,9 @@ exports[`renders the portfolio page section correctly 1`] = `
           className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
         />
       </button>
-       
       <a
         className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1ps4owl-MuiTypography-root-MuiLink-root"
+        data-cy="calculator-project-link"
         href="https://davidronnlidcalculator.netlify.app"
         onBlur={[Function]}
         onFocus={[Function]}
