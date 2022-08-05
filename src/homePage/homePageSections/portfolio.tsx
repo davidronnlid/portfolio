@@ -23,6 +23,7 @@ const Portfolio: React.FC<PortfolioProps> = ({
                 imgSrcUrl={DRMImage}
                 containerImg="Desktop"
                 projectGithubLink="https://github.com/davidronnlid/movie-project"
+                dataCy="movie-browser-project-link"
             />
             <ProjectCard
                 visitProjectLink="https://davidronnlidcalculator.netlify.app"
@@ -30,6 +31,7 @@ const Portfolio: React.FC<PortfolioProps> = ({
                 imgSrcUrl={CalcAppImage}
                 containerImg="Mobile"
                 projectGithubLink="https://github.com/davidronnlid/calculator-app"
+                dataCy="calculator-project-link"
             />
         </Grid>
     </Box>

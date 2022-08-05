@@ -14,6 +14,7 @@ interface ProjectCardProps {
     title: string
     visitProjectLink: string
     projectGithubLink: string
+    dataCy: string
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -22,6 +23,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     title,
     visitProjectLink,
     projectGithubLink,
+    dataCy,
 }: ProjectCardProps) => {
     return (
         <Grid item md={containerImg === 'Desktop' ? 8 : 4}>
@@ -29,8 +31,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 icon={<BsGithub className="projectGithubIcon" />}
                 title="Project Tooltip Github Link"
                 link={projectGithubLink}
-            />{' '}
-            <Link href={visitProjectLink}>
+            />
+            <Link href={visitProjectLink} data-cy={dataCy}>
                 {containerImg === 'Mobile' ? (
                     <Box className="projectContainer mobileProjectContainer">
                         <img
