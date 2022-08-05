@@ -3,7 +3,7 @@
 exports[`renders main CTA 1`] = `
 <div
   aria-label="MainCTA"
-  className="MuiBox-root css-1e7ldzq"
+  className="MuiBox-root css-1vogw4e"
   role="MUIBox"
 >
   <button
@@ -37,7 +37,7 @@ exports[`renders main CTA 1`] = `
     >
       <svg
         fill="currentColor"
-        height="3rem"
+        height="2.5rem"
         role="img"
         stroke="currentColor"
         strokeWidth="0"
@@ -51,7 +51,7 @@ exports[`renders main CTA 1`] = `
           }
         }
         viewBox="0 0 24 24"
-        width="3rem"
+        width="2.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
         <title />
