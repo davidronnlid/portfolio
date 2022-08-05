@@ -11,8 +11,8 @@ const MainCTA: React.FC = (): JSX.Element => {
         <Box
             sx={{
                 position: 'fixed',
-                top: '1vh',
-                right: '1vh',
+                top: 5,
+                right: 7,
                 padding: 0,
                 border: 'none',
                 margin: 0,
@@ -26,7 +26,7 @@ const MainCTA: React.FC = (): JSX.Element => {
                     <IconContext.Provider
                         value={{
                             color: 'var(--button-color)',
-                            size: '3rem',
+                            size: '2.5rem',
                             style: {
                                 backgroundColor: 'var(--secondary-color)',
                                 border: 'none',
