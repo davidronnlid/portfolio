@@ -8,7 +8,7 @@ it('renders the portfolio page section correctly', () => {
 })
 
 // Basic React Testing Library tests for the portfolio page section
-import { getByAltText, render, screen, within } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 
 describe('two projects are rendered in the portfolio, each with a related icon with a GitHub project link and an image that has a relevant project link', () => {
     beforeEach(() => {
