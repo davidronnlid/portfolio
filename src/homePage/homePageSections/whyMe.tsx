@@ -11,17 +11,17 @@ const WhyMe: React.FC<WhyMeProps> = ({ title }: WhyMeProps): JSX.Element => {
         <>
             <Typography variant="h3">{title}</Typography>
             <ul>
-                <li>
+                <li style={{ marginBottom: '1rem' }}>
                     <Typography variant="body1">
                         I love working with people who are driven to learn
                     </Typography>
                 </li>
-                <li>
+                <li style={{ marginBottom: '1rem' }}>
                     <Typography variant="body1">
                         I love creating great products with code
                     </Typography>
                 </li>
-                <li>
+                <li style={{ marginBottom: '1rem' }}>
                     <Typography variant="body1">
                         I am a passionate junior front-end developer specialized
                         in React and TypeScript

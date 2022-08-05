@@ -65,7 +65,11 @@ const Welcome: React.FC<WelcomeProps> = ({
                     value={{
                         color: 'var(--secondary-color)',
                         size: '7vh',
-                        style: { position: 'absolute', left: 0, bottom: '5vh' },
+                        style: {
+                            position: 'absolute',
+                            left: 0,
+                            top: '85vh',
+                        },
                     }}
                 >
                     <GiEnergyArrow />

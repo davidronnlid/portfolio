@@ -8,7 +8,7 @@ interface PageSectionProps {
 const PageSection: React.FC<PageSectionProps> = ({
     comp,
 }: PageSectionProps): JSX.Element => (
-    <Box sx={{ width: '100%', height: '100vh', mb: '15vh' }}>{comp}</Box>
+    <Box sx={{ width: '100%', minHeight: '100vh', mb: '15vh' }}>{comp}</Box>
 )
 
 export default PageSection
