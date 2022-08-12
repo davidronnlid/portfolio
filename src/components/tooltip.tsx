@@ -9,13 +9,17 @@ interface TooltipLinkProps {
     title: string
 }
 
-const TooltipLink = ({ icon, link, title }: TooltipLinkProps): JSX.Element => (
+const TooltipLink: React.FC<TooltipLinkProps> = ({
+    icon,
+    link,
+    title,
+}: TooltipLinkProps): JSX.Element => (
     <Tooltip title={title}>
         <IconButton>
             <Link href={link} data-testid="github-link">
                 <IconContext.Provider
                     value={{
-                        color: 'var(--secondary-color)',
+                        color: 'var(--tertiary-color)',
                     }}
                 >
                     {icon}

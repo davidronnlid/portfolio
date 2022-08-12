@@ -1,31 +1,25 @@
 import Box from '@mui/material/Box'
 import Link from '@mui/material/Link'
 import Typography from '@mui/material/Typography'
-import { GiEnergyArrow } from 'react-icons/gi'
+import { BsArrowDown } from 'react-icons/bs'
 import { IconContext } from 'react-icons'
 import noBGConfidentSmile from '../images/noBGConfidentSmile.png'
 import { useTheme } from '@mui/material/styles'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import './welcome.scss'
 
-interface WelcomeProps {
-    title: string
-    subTitle: string
-}
-
-const Welcome: React.FC<WelcomeProps> = ({
-    title,
-    subTitle,
-}: WelcomeProps): JSX.Element => {
+const Welcome: React.FC = (): JSX.Element => {
     const theme = useTheme()
+    const smallScreen = useMediaQuery(theme.breakpoints.up('sm'))
     const mediumScreen = useMediaQuery(theme.breakpoints.up('md'))
 
     return (
         <Box
             sx={{
                 position: 'relative',
-                width: '100%',
-                height: '100%',
+                width: '80vw',
+                mx: 'auto',
+                minHeight: '100vh',
             }}
         >
             <Typography
@@ -33,24 +27,24 @@ const Welcome: React.FC<WelcomeProps> = ({
                 sx={{
                     fontFamily: 'Bebas Neue',
                     position: 'relative',
-                    top: '10vh',
+                    top: '27.5vh',
                 }}
             >
-                {title}
-            </Typography>
-            <Typography
-                variant="h5"
-                sx={{
-                    fontFamily: 'Bebas Neue',
-                    color: 'var(--primary-color)',
-                    px: 1.5,
-                    position: 'relative',
-                    top: '10vh',
-                }}
-            >
-                <span className="subtitle">{subTitle}</span>
+                Hi, I am David.
             </Typography>
 
+            <Typography variant="h5">
+                {/* This element is styled in fontTheme.tsx and the span chhild element in welcome.scss */}
+                <span
+                    className={`subtitle${
+                        mediumScreen
+                            ? ' extraSubtitleStylesOnMediumScreensUp'
+                            : ''
+                    }`}
+                >
+                    I love to code websites in React and TypeScript.
+                </span>
+            </Typography>
             {mediumScreen ? (
                 <img
                     src={noBGConfidentSmile}
@@ -72,7 +66,7 @@ const Welcome: React.FC<WelcomeProps> = ({
                         },
                     }}
                 >
-                    <GiEnergyArrow />
+                    <BsArrowDown />
                 </IconContext.Provider>
             </Link>
         </Box>

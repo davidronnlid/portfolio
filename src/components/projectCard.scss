@@ -1,16 +1,16 @@
-.projectGithubIcon {
-    color: var(--secondary-color);
-    margin: 2.5rem auto 1rem auto;
+.projectTitle,
+.projectDescription {
+    color: var(--primary-color);
 }
 
 .projectContainer {
     position: relative;
-    width: 100%;
+    width: 80%;
     margin: 0 auto;
 }
 
 .mobileProjectContainer {
-    width: 92%;
+    width: 40vw;
     top: -0.5vw;
 }
 

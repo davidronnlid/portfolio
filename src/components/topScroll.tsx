@@ -5,7 +5,7 @@ import Box from '@mui/material/Box'
 import useScrollTrigger from '@mui/material/useScrollTrigger'
 
 interface ScrollTopProps {
-    children: JSX.Element
+    children?: JSX.Element
 }
 
 const ScrollTop: React.FC<ScrollTopProps> = (props: ScrollTopProps) => {
