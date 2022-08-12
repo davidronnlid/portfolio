@@ -63,6 +63,7 @@ const Welcome: React.FC = (): JSX.Element => {
                             position: 'absolute',
                             left: 0,
                             top: '85vh',
+                            filter: 'drop-shadow(3px 3px 3px #000)',
                         },
                     }}
                 >
