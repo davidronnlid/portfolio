@@ -1,8 +1,6 @@
 import * as React from 'react'
 import Link from '@mui/material/Link'
 import Box from '@mui/material/Box'
-import { BsGithub } from 'react-icons/bs'
-import TooltipLink from './tooltip'
 import iPhone from '../homePage/images/iPhone.png'
 import Mac from '../homePage/images/Mac.png'
 import './projectCard.scss'
@@ -32,23 +30,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         <Grid item md={containerImg === 'Desktop' ? 8 : 4} sx={{ mb: '15vh' }}>
             {containerImg === 'Mobile' ? (
                 <>
-                    <Typography variant="h4" className="projectTitle">
-                        {title}{' '}
-                    </Typography>
-                    <Typography variant="body1" className="projectDescription">
-                        {description}
-                    </Typography>
-
-                    <Button variant="contained">
-                        <a
-                            href={projectGithubLink}
-                            style={{ textDecoration: 'none' }}
-                        >
-                            <Typography variant="body1">
-                                View project code
-                            </Typography>
-                        </a>
-                    </Button>
+                    <ProjectDescription
+                        title={title}
+                        description={description}
+                        projectGithubLink={projectGithubLink}
+                    />
                     <Box className="projectContainer mobileProjectContainer">
                         <Link href={visitProjectLink} data-cy={dataCy}>
                             <img
@@ -73,22 +59,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 </>
             ) : (
                 <>
-                    <Typography variant="h4" className="projectTitle">
-                        {title}
-                    </Typography>{' '}
-                    <Typography variant="body1" className="projectDescription">
-                        {description}
-                    </Typography>
-                    <Button variant="contained">
-                        <a
-                            href={projectGithubLink}
-                            style={{ textDecoration: 'none' }}
-                        >
-                            <Typography variant="body1">
-                                View project code
-                            </Typography>
-                        </a>
-                    </Button>
+                    <ProjectDescription
+                        title={title}
+                        description={description}
+                        projectGithubLink={projectGithubLink}
+                    />
                     <Box className="projectContainer">
                         <Link href={visitProjectLink} data-cy={dataCy}>
                             <img
@@ -115,3 +90,52 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 }
 
 export default ProjectCard
+
+interface ProjectDescriptionProps {
+    title: string
+    description: string
+    projectGithubLink: string
+}
+
+const ProjectDescription = ({
+    title,
+    description,
+    projectGithubLink,
+}: ProjectDescriptionProps) => {
+    return (
+        <>
+            <Typography
+                variant="h4"
+                className="projectTitle"
+                sx={{
+                    mb: 'var(--std-mb)',
+                    fontFamily: "'Magra', sans-serif",
+                }}
+            >
+                {title}
+            </Typography>
+            <Typography
+                variant="body1"
+                className="projectDescription"
+                sx={{
+                    mb: 'var(--std-mb)',
+                    fontFamily: "'Magra', sans-serif",
+                }}
+            >
+                {description}
+            </Typography>
+            <Button variant="contained" sx={{ mb: '3rem' }}>
+                <a href={projectGithubLink} style={{ textDecoration: 'none' }}>
+                    <Typography
+                        variant="body1"
+                        sx={{
+                            fontFamily: "'Magra', sans-serif",
+                        }}
+                    >
+                        View project code
+                    </Typography>
+                </a>
+            </Button>
+        </>
+    )
+}

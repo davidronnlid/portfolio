@@ -10,16 +10,18 @@ const Portfolio: React.FC = (): JSX.Element => (
         id="portfolio"
         sx={{
             backgroundColor: 'var(--secondary-color)',
-
             width: '100vw',
         }}
     >
         <Box sx={{ width: '80vw', margin: '0 auto' }}>
             <Typography
                 variant="h3"
-                pt={5}
                 sx={{
-                    color: 'var(--tertiary-color)',
+                    color: 'var(--primary-color)',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.8px',
+                    padding: '3rem 0 1rem ',
+                    fontFamily: "'Magra', sans-serif",
                 }}
             >
                 Portfolio
@@ -28,7 +30,7 @@ const Portfolio: React.FC = (): JSX.Element => (
                 <ProjectCard
                     visitProjectLink="https://davidronnlidmovies.netlify.app"
                     title="Movie Browser"
-                    description="Data fetching from 3rd-party API with the native fetch() API, state management with Redux, and type control with TypeScript."
+                    description="Data fetched from 3rd-party API with the native fetch() API, state management with Redux, and type control with TypeScript."
                     imgSrcUrl={DRMImage}
                     containerImg="Desktop"
                     projectGithubLink="https://github.com/davidronnlid/movie-project"
@@ -37,7 +39,7 @@ const Portfolio: React.FC = (): JSX.Element => (
                 <ProjectCard
                     visitProjectLink="https://davidronnlidcalculator.netlify.app"
                     title="Calculator"
-                    description="JavaScript algorithm skills showcased. The logic behind the calculator is written in TypeScript and styling is as I usually do done with SCSS and a CSS library. "
+                    description="JavaScript algorithm skills showcased. Edge case and error handling is manually managed to demonstrate deep understanding of the underlying principles of good modern JS web apps."
                     imgSrcUrl={CalcAppImage}
                     containerImg="Mobile"
                     projectGithubLink="https://github.com/davidronnlid/calculator-app"

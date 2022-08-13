@@ -1,3 +1,7 @@
+:root {
+    --std-mb: 0.8rem;
+}
+
 .projectTitle,
 .projectDescription {
     color: var(--primary-color);
@@ -26,7 +30,7 @@
     position: absolute;
     top: 4%;
     left: 10%;
-    border-radius: 2rem;
+    border-radius: 1vw;
 }
 
 .desktopContainerImg {

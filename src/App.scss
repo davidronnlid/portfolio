@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Magra:wght@700&display=swap');
 :root {
     --primary-color: #173d52;
     --secondary-color: #e0e0e0;
@@ -22,6 +22,7 @@ body {
     background: var(--tertiary-color);
     overflow-x: hidden;
     margin-bottom: 0;
+    margin-left: 0px;
 }
 
 h1,

@@ -14,11 +14,21 @@ const FontTheme: React.FC<FontThemeProps> = ({
 
     theme.typography.h1 = {
         fontSize: '16vw',
-        '@media (min-width:600px)': {
+        [theme.breakpoints.up('sm')]: {
             fontSize: '9rem',
         },
         [theme.breakpoints.up('md')]: {
             fontSize: '11vw',
+        },
+    }
+
+    theme.typography.h3 = {
+        fontSize: '13vw',
+        [theme.breakpoints.up('sm')]: {
+            fontSize: '8vw',
+        },
+        [theme.breakpoints.up('md')]: {
+            fontSize: '5.5vw',
         },
     }
 
