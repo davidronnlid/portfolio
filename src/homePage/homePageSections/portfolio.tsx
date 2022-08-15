@@ -26,11 +26,11 @@ const Portfolio: React.FC = (): JSX.Element => (
             >
                 Portfolio
             </Typography>
-            <Grid container direction="column" spacing={3}>
+            <Grid container direction="column" spacing="13vw">
                 <ProjectCard
                     visitProjectLink="https://davidronnlidmovies.netlify.app"
                     title="Movie Browser"
-                    description="Data fetched from 3rd-party API with the native fetch() API, state management with Redux, and type control with TypeScript."
+                    description="Data fetched from 3rd-party API with the native fetch() API, state management with Redux, and type control with TypeScript. Styled with Material UI and SCSS."
                     imgSrcUrl={DRMImage}
                     containerImg="Desktop"
                     projectGithubLink="https://github.com/davidronnlid/movie-project"
@@ -39,7 +39,7 @@ const Portfolio: React.FC = (): JSX.Element => (
                 <ProjectCard
                     visitProjectLink="https://davidronnlidcalculator.netlify.app"
                     title="Calculator"
-                    description="JavaScript algorithm skills showcased. Edge case and error handling is manually managed to demonstrate deep understanding of the underlying principles of good modern JS web apps."
+                    description="JavaScript algorithm skills showcased. Edge case and error handling is manually managed to demonstrate deep understanding of the underlying principles of good modern JS web apps. Styled with React-Bootstrap and CSS."
                     imgSrcUrl={CalcAppImage}
                     containerImg="Mobile"
                     projectGithubLink="https://github.com/davidronnlid/calculator-app"

@@ -27,7 +27,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     dataCy,
 }: ProjectCardProps) => {
     return (
-        <Grid item md={containerImg === 'Desktop' ? 8 : 4} sx={{ mb: '15vh' }}>
+        <Grid item md={containerImg === 'Desktop' ? 8 : 4} sx={{ mb: '7vw' }}>
             {containerImg === 'Mobile' ? (
                 <>
                     <ProjectDescription
